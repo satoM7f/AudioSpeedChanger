@@ -1,0 +1,87 @@
+/* リセットCSS*/
+* {
+  box-sizing: border-box;
+}
+
+
+/* 全体 */
+body {
+  padding-left: 150px;
+  font-family:  "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
+  color: #222;
+  background-color:#EFF5F5;
+}
+
+
+/* ラジオボタン */
+.playlist {
+  width: 3rem;
+  height:3rem;
+}
+
+
+/* コントローラー */
+#speedControler {
+  position: fixed;
+  bottom: 40%;
+  left: -150px;
+  background-color: #DAE2B6;
+  outline: solid 10px #DAE2B6;
+  border-radius: 10px;
+  transform: rotate(-0.25turn);
+}
+
+#speed_num {
+  padding-left: 250px;
+}
+
+
+/* リセットボタン */
+#reset_btn {
+    transform: rotate(0.25turn);
+    border-radius: 100px;
+    padding: 15px;
+    box-sizing: border-box;
+    background: #497174;
+    color: #FFF;
+    text-decoration: none;
+    text-align: center;
+    margin: 10px 0;
+    border-color: #D6E4E5;
+}
+
+
+/* スライダー */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  outline: none;
+  background: #EB6440;
+  height: 14px;
+  width: 350px;
+  border-radius: 30px;
+  border: solid 3px #eaae9e;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  background: #EB6440;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+
+input[type="range"]::-moz-range-thumb {
+  background: #EB6440;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+
+  border: none;
+}
+
+input[type="range"]::-moz-focus-outer {
+  border: 0;
+}

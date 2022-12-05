@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- meta http-equiv="X-UA-Compatible" content="IE=edge" / -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./CSS/index.css" />
+  </head>
+
+  <body>
+    <h1>時短クン</h1>
+    <h4>
+      「時短クン」はPower Pointの音声を高速で再生するために作ったものです<br />
+      ファイルの選択ではファイルネームが以下の条件を満たすことを想定しています<br />
+      2,「media(番号).(m4a,mp3などの音声ファイル拡張子)」<br />
+      1, (番号)は1から始まる連番<br />
+    </h4>
+    <h2>使い方</h2>
+    <h4>
+      Power Pointを解凍してください<br />
+      このページの下のファイルを選択ボタン等から音声ファイルを選択（複数可）してください<br />
+      音声ファイルはほとんどの場合、解凍されたファイルの/ppt/media/に格納されています<br />
+      ラジオボタン（音声コントローラーの横の丸いボタン）を押すとそこから順番に再生されます<br />
+      左のスライダーで再生速度を調整してください<br />
+      0 ~ 4倍まで対応してます<br/>
+      Resetボタンを押すとすべてのオーディオの再生位置が初めからになります<br />
+    </h4>
+
+    <div id="speedControler">
+      <div id="speed_num"><span id="speed_range">1.0</span><br /></div>
+      <button id="reset_btn" onclick="resetAllAudio();">Reset</button>
+      
+      <label
+        >Speed:<input
+          type="range"
+          min="0"
+          max="4"
+          step="0.1"
+          value="1"
+          id="speedSlider"
+      /></label>
+    </div>
+    <br />
+
+    <input
+      type="file"
+      title="file"
+      id="file"
+      name="upfile[]"
+      accept=".m4a,.mp3"
+      multiple
+    />
+    <div id="list"></div>
+
+    <script type="text/javascript" src="./JS/audioView.js"></script>
+    <script type="text/javascript" src="./JS/speedControl.js"></script>
+    <script type="text/javascript" src="./JS/playControl.js"></script>
+  </body>
+</html>
